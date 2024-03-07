@@ -27,19 +27,19 @@ public :
 
     void printDateOnConsole()
     {
-        printf("//////////////////////////////////////////\n");
-        printf("           Date : %d / %d / %d \n",day, month, year);
-        printf("//////////////////////////////////////////\n");
+        cout<<"/////////////////////////////////////////////"<<endl;
+        cout<<"        Date : "<<day<<"/"<<month<<"/"<<year<<endl;
+        cout<<"/////////////////////////////////////////////"<<endl;
     }
 
     void acceptDateFromConsole()
     {
-        printf("Enter day : ");
-        scanf("%d",&day);
-        printf("Enter month : ");
-        scanf("%d",&month);
-        printf("Enter year : ");
-        scanf("%d",&year);
+        cout<<"Enter day : ";
+        cin>>day;
+        cout<<"Enter month : ";
+        cin>>month;
+        cout<<"Enter year : ";
+        cin>>year;
     }
 
     void isLeapYear()
@@ -60,13 +60,13 @@ public :
 int menu()
 {
     int choice;
-    printf("select your choice : \n");
-    printf("1 : initialize date\n");
-    printf("2 : display date\n");
-    printf("3 : accept date\n");   
-    printf("4 : check leap year\n");
-    printf("0 : Exit\n");
-    scanf("%d",&choice);
+    cout<<"-----------select your choice : ------------\n";
+    cout<<"1 : initialize date\n";
+    cout<<"2 : display date\n";
+    cout<<"3 : accept date\n";
+    cout<<"4 : check leap year\n";
+    cout<<"0 : Exit\n";
+    cin>>choice;
 
     return choice;
 }
@@ -92,7 +92,7 @@ int main()
             date.isLeapYear();
             break;
         default:
-            if(choice != 0) printf("Enter valid choice \n");
+            if(choice != 0) cout<<"Enter valid choice \n";
         }
 
     }while(choice != 0);
