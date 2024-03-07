@@ -44,7 +44,7 @@ void acceptDateFromConsole(struct Date* ptrDate)
 int menu()
 {
     int choice;
-    printf("select your choice : \n");
+    printf("--------------select your choice : ----------------\n");
     printf("1 : initialize date\n");
     printf("2 : display date\n");
     printf("3 : accept date\n");
@@ -72,7 +72,7 @@ int main()
             acceptDateFromConsole(&date);
             break;
         default:
-            printf("Enter valid choice \n");
+            if(choice != 0) printf("Enter valid choice \n");
         }
 
     }while(choice != 0);
